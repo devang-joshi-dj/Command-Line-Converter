@@ -30,6 +30,11 @@ main() {
 
     case '6':
       handleTimeConversion();
+      break;
+
+    default:
+      print('Input Error. Try Again');
+      break;
   }
 }
 
@@ -43,11 +48,15 @@ printAllConversions() {
 }
 
 firstUnitQuestion() {
-  print('From what unit would you like to convert');
+  print('From what unit would you like to convert?');
 }
 
 secondUnitQuestion() {
-  print('To what unit would you like to convert');
+  print('To what unit would you like to convert?');
+}
+
+inputInstruction() {
+  print('------Provide Input Value------');
 }
 
 handleLengthConversions() {
@@ -57,6 +66,12 @@ handleLengthConversions() {
   secondUnitQuestion();
   printAllLengthConversions();
   var secondUnit = stdin.readLineSync();
+  inputInstruction();
+  String? stringInput = stdin.readLineSync();
+  if (stringInput != null) {
+    int inputValue = int.parse(stringInput);
+    convertLength(inputValue, firstUnit, secondUnit);
+  }
 }
 
 handleTemperatureConversions() {
@@ -66,6 +81,12 @@ handleTemperatureConversions() {
   secondUnitQuestion();
   printAllTemperatureConversions();
   var secondUnit = stdin.readLineSync();
+  inputInstruction();
+  String? stringInput = stdin.readLineSync();
+  if (stringInput != null) {
+    int inputValue = int.parse(stringInput);
+    convertTemperature(inputValue, firstUnit, secondUnit);
+  }
 }
 
 handleAreaConversions() {
@@ -75,6 +96,12 @@ handleAreaConversions() {
   secondUnitQuestion();
   printAllAreaConversions();
   var secondUnit = stdin.readLineSync();
+  inputInstruction();
+  String? stringInput = stdin.readLineSync();
+  if (stringInput != null) {
+    int inputValue = int.parse(stringInput);
+    // convertArea(inputValue, firstUnit, secondUnit);
+  }
 }
 
 handleVolumeConversion() {
@@ -84,6 +111,12 @@ handleVolumeConversion() {
   secondUnitQuestion();
   printAllVolumeConversion();
   var secondUnit = stdin.readLineSync();
+  inputInstruction();
+  String? stringInput = stdin.readLineSync();
+  if (stringInput != null) {
+    int inputValue = int.parse(stringInput);
+    // convertVolume(inputValue, firstUnit, secondUnit);
+  }
 }
 
 handleWeightConversion() {
@@ -93,6 +126,12 @@ handleWeightConversion() {
   secondUnitQuestion();
   printAllWeightConversion();
   var secondUnit = stdin.readLineSync();
+  inputInstruction();
+  String? stringInput = stdin.readLineSync();
+  if (stringInput != null) {
+    int inputValue = int.parse(stringInput);
+    // convertWeight(inputValue, firstUnit, secondUnit);
+  }
 }
 
 handleTimeConversion() {
@@ -102,6 +141,44 @@ handleTimeConversion() {
   secondUnitQuestion();
   printAllTimeConversion();
   var secondUnit = stdin.readLineSync();
+  inputInstruction();
+  String? stringInput = stdin.readLineSync();
+  if (stringInput != null) {
+    int inputValue = int.parse(stringInput);
+    // convertTime(inputValue, firstUnit, secondUnit);
+  }
+}
+
+convertLength(inputValue, firstUnit, secondUnit) {
+  print('------Your Result------');
+  if (firstUnit == secondUnit) {
+    print(inputValue);
+  } else if (firstUnit == '1' && secondUnit == '2') {
+    inputValue = inputValue / 1000;
+  } else if (firstUnit == '2' && secondUnit == '1') {
+    inputValue = inputValue * 1000;
+  }
+  print(inputValue);
+}
+
+convertTemperature(inputValue, firstUnit, secondUnit) {
+  print('------Your Result------');
+  if (firstUnit == secondUnit) {
+    print(inputValue);
+  } else if (firstUnit == '1' && secondUnit == '2') {
+    inputValue = inputValue + 273.15;
+  } else if (firstUnit == '2' && secondUnit == '1') {
+    inputValue = inputValue - 273.15;
+  } else if (firstUnit == '1' && secondUnit == '3') {
+    inputValue = (inputValue * 9 / 5) + 32;
+  } else if (firstUnit == '3' && secondUnit == '1') {
+    inputValue = (inputValue - 32) * 5 / 9;
+  } else if (firstUnit == '2' && secondUnit == '3') {
+    inputValue = (inputValue - 273.15) * 9 / 5 + 32;
+  } else if (firstUnit == '3' && secondUnit == '2') {
+    inputValue = (inputValue - 32) * 5 / 9 + 273.15;
+  }
+  print(inputValue);
 }
 
 printAllLengthConversions() {
