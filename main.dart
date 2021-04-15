@@ -21,14 +21,10 @@ main() {
       break;
 
     case '4':
-      handleVolumeConversion();
-      break;
-
-    case '5':
       handleWeightConversion();
       break;
 
-    case '6':
+    case '5':
       handleTimeConversion();
       break;
 
@@ -100,22 +96,7 @@ handleAreaConversions() {
   String? stringInput = stdin.readLineSync();
   if (stringInput != null) {
     int inputValue = int.parse(stringInput);
-    // convertArea(inputValue, firstUnit, secondUnit);
-  }
-}
-
-handleVolumeConversion() {
-  firstUnitQuestion();
-  printAllVolumeConversion();
-  var firstUnit = stdin.readLineSync();
-  secondUnitQuestion();
-  printAllVolumeConversion();
-  var secondUnit = stdin.readLineSync();
-  inputInstruction();
-  String? stringInput = stdin.readLineSync();
-  if (stringInput != null) {
-    int inputValue = int.parse(stringInput);
-    // convertVolume(inputValue, firstUnit, secondUnit);
+    convertArea(inputValue, firstUnit, secondUnit);
   }
 }
 
@@ -130,7 +111,7 @@ handleWeightConversion() {
   String? stringInput = stdin.readLineSync();
   if (stringInput != null) {
     int inputValue = int.parse(stringInput);
-    // convertWeight(inputValue, firstUnit, secondUnit);
+    convertWeight(inputValue, firstUnit, secondUnit);
   }
 }
 
@@ -145,7 +126,7 @@ handleTimeConversion() {
   String? stringInput = stdin.readLineSync();
   if (stringInput != null) {
     int inputValue = int.parse(stringInput);
-    // convertTime(inputValue, firstUnit, secondUnit);
+    convertTime(inputValue, firstUnit, secondUnit);
   }
 }
 
@@ -157,6 +138,146 @@ convertLength(inputValue, firstUnit, secondUnit) {
     inputValue = inputValue / 1000;
   } else if (firstUnit == '2' && secondUnit == '1') {
     inputValue = inputValue * 1000;
+  } else if (firstUnit == '1' && secondUnit == '3') {
+    inputValue = inputValue * 1000;
+  } else if (firstUnit == '3' && secondUnit == '1') {
+    inputValue = inputValue / 1000;
+  } else if (firstUnit == '1' && secondUnit == '4') {
+    inputValue = inputValue * 1000000;
+  } else if (firstUnit == '4' && secondUnit == '1') {
+    inputValue = inputValue / 1000000;
+  } else if (firstUnit == '1' && secondUnit == '5') {
+    inputValue = inputValue * 1000000000;
+  } else if (firstUnit == '5' && secondUnit == '1') {
+    inputValue = inputValue / 1000000000;
+  } else if (firstUnit == '1' && secondUnit == '6') {
+    inputValue = inputValue / 1609;
+  } else if (firstUnit == '6' && secondUnit == '1') {
+    inputValue = inputValue * 1609;
+  } else if (firstUnit == '1' && secondUnit == '7') {
+    inputValue = inputValue * 1.094;
+  } else if (firstUnit == '7' && secondUnit == '1') {
+    inputValue = inputValue / 1.094;
+  } else if (firstUnit == '1' && secondUnit == '8') {
+    inputValue = inputValue * 3.281;
+  } else if (firstUnit == '8' && secondUnit == '1') {
+    inputValue = inputValue / 3.281;
+  } else if (firstUnit == '1' && secondUnit == '9') {
+    inputValue = inputValue * 39.37;
+  } else if (firstUnit == '9' && secondUnit == '1') {
+    inputValue = inputValue / 39.37;
+  } else if (firstUnit == '2' && secondUnit == '3') {
+    inputValue = inputValue * 1000000;
+  } else if (firstUnit == '3' && secondUnit == '2') {
+    inputValue = inputValue / 1000000;
+  } else if (firstUnit == '2' && secondUnit == '4') {
+    inputValue = inputValue * 1000000000;
+  } else if (firstUnit == '4' && secondUnit == '2') {
+    inputValue = inputValue / 1000000000;
+  } else if (firstUnit == '2' && secondUnit == '5') {
+    inputValue = inputValue * 1000000000000;
+  } else if (firstUnit == '5' && secondUnit == '2') {
+    inputValue = inputValue / 1000000000000;
+  } else if (firstUnit == '2' && secondUnit == '6') {
+    inputValue = inputValue / 1.609;
+  } else if (firstUnit == '6' && secondUnit == '2') {
+    inputValue = inputValue * 1.609;
+  } else if (firstUnit == '2' && secondUnit == '7') {
+    inputValue = inputValue * 1094;
+  } else if (firstUnit == '7' && secondUnit == '2') {
+    inputValue = inputValue / 1094;
+  } else if (firstUnit == '2' && secondUnit == '8') {
+    inputValue = inputValue * 3281;
+  } else if (firstUnit == '8' && secondUnit == '2') {
+    inputValue = inputValue / 3281;
+  } else if (firstUnit == '2' && secondUnit == '9') {
+    inputValue = inputValue * 39370;
+  } else if (firstUnit == '9' && secondUnit == '2') {
+    inputValue = inputValue / 39370;
+  } else if (firstUnit == '3' && secondUnit == '4') {
+    inputValue = inputValue * 1000;
+  } else if (firstUnit == '4' && secondUnit == '3') {
+    inputValue = inputValue / 1000;
+  } else if (firstUnit == '3' && secondUnit == '5') {
+    inputValue = inputValue * 1000000;
+  } else if (firstUnit == '5' && secondUnit == '3') {
+    inputValue = inputValue / 1000000;
+  } else if (firstUnit == '3' && secondUnit == '6') {
+    inputValue = inputValue * 0.0000006213712;
+  } else if (firstUnit == '6' && secondUnit == '3') {
+    inputValue = inputValue / 0.0000006213712;
+  } else if (firstUnit == '3' && secondUnit == '7') {
+    inputValue = inputValue / 914;
+  } else if (firstUnit == '7' && secondUnit == '3') {
+    inputValue = inputValue * 914;
+  } else if (firstUnit == '3' && secondUnit == '8') {
+    inputValue = inputValue / 305;
+  } else if (firstUnit == '8' && secondUnit == '3') {
+    inputValue = inputValue * 305;
+  } else if (firstUnit == '3' && secondUnit == '9') {
+    inputValue = inputValue / 25.4;
+  } else if (firstUnit == '9' && secondUnit == '3') {
+    inputValue = inputValue * 25.4;
+  } else if (firstUnit == '4' && secondUnit == '5') {
+    inputValue = inputValue * 1000;
+  } else if (firstUnit == '5' && secondUnit == '4') {
+    inputValue = inputValue / 1000;
+  } else if (firstUnit == '4' && secondUnit == '6') {
+    inputValue = inputValue * 0.0000000006213712;
+  } else if (firstUnit == '6' && secondUnit == '4') {
+    inputValue = inputValue / 0.0000000006213712;
+  } else if (firstUnit == '4' && secondUnit == '7') {
+    inputValue = inputValue / 914400;
+  } else if (firstUnit == '7' && secondUnit == '4') {
+    inputValue = inputValue * 914400;
+  } else if (firstUnit == '4' && secondUnit == '8') {
+    inputValue = inputValue / 304800;
+  } else if (firstUnit == '8' && secondUnit == '4') {
+    inputValue = inputValue * 304800;
+  } else if (firstUnit == '4' && secondUnit == '9') {
+    inputValue = inputValue / 25400;
+  } else if (firstUnit == '9' && secondUnit == '4') {
+    inputValue = inputValue * 25400;
+  } else if (firstUnit == '5' && secondUnit == '6') {
+    inputValue = inputValue * 0.0000000000006213712;
+  } else if (firstUnit == '6' && secondUnit == '5') {
+    inputValue = inputValue / 0.0000000000006213712;
+  } else if (firstUnit == '5' && secondUnit == '7') {
+    inputValue = inputValue * 0.000000001093613;
+  } else if (firstUnit == '7' && secondUnit == '5') {
+    inputValue = inputValue / 0.000000001093613;
+  } else if (firstUnit == '5' && secondUnit == '8') {
+    inputValue = inputValue * 0.00000000328084;
+  } else if (firstUnit == '8' && secondUnit == '5') {
+    inputValue = inputValue / 0.00000000328084;
+  } else if (firstUnit == '5' && secondUnit == '9') {
+    inputValue = inputValue * 0.00000003937008;
+  } else if (firstUnit == '9' && secondUnit == '5') {
+    inputValue = inputValue / 0.00000003937008;
+  } else if (firstUnit == '6' && secondUnit == '7') {
+    inputValue = inputValue * 1760;
+  } else if (firstUnit == '7' && secondUnit == '6') {
+    inputValue = inputValue / 1760;
+  } else if (firstUnit == '6' && secondUnit == '8') {
+    inputValue = inputValue * 5280;
+  } else if (firstUnit == '8' && secondUnit == '6') {
+    inputValue = inputValue / 5280;
+  } else if (firstUnit == '6' && secondUnit == '9') {
+    inputValue = inputValue * 63360;
+  } else if (firstUnit == '9' && secondUnit == '6') {
+    inputValue = inputValue / 63360;
+  } else if (firstUnit == '7' && secondUnit == '8') {
+    inputValue = inputValue * 3;
+  } else if (firstUnit == '8' && secondUnit == '7') {
+    inputValue = inputValue / 3;
+  } else if (firstUnit == '7' && secondUnit == '9') {
+    inputValue = inputValue * 36;
+  } else if (firstUnit == '9' && secondUnit == '7') {
+    inputValue = inputValue / 36;
+  } else if (firstUnit == '8' && secondUnit == '9') {
+    inputValue = inputValue * 12;
+  } else if (firstUnit == '9' && secondUnit == '8') {
+    inputValue = inputValue / 12;
   }
   print(inputValue);
 }
@@ -181,6 +302,650 @@ convertTemperature(inputValue, firstUnit, secondUnit) {
   print(inputValue);
 }
 
+convertArea(inputValue, firstUnit, secondUnit) {
+  print('------Your Result------');
+  if (firstUnit == secondUnit) {
+    print(inputValue);
+  } else if (firstUnit == '1' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '10') {
+    inputValue = inputValue;
+  }
+  print(inputValue);
+}
+
+convertWeight(inputValue, firstUnit, secondUnit) {
+  print('------Your Result------');
+  if (firstUnit == secondUnit) {
+    print(inputValue);
+  } else if (firstUnit == '1' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '9') {
+    inputValue = inputValue;
+  }
+  print(inputValue);
+}
+
+convertTime(inputValue, firstUnit, secondUnit) {
+  print('------Your Result------');
+  if (firstUnit == secondUnit) {
+    print(inputValue);
+  } else if (firstUnit == '1' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '1' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '1') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '2' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '2') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '4') {
+    inputValue = inputValue;
+  } else if (firstUnit == '3' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '3') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '5' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '5') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '6' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '6') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '7' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '7') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '8' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '8') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '10') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '9' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '9') {
+    inputValue = inputValue;
+  } else if (firstUnit == '10' && secondUnit == '11') {
+    inputValue = inputValue;
+  } else if (firstUnit == '11' && secondUnit == '10') {
+    inputValue = inputValue;
+  }
+  print(inputValue);
+}
+
 printAllLengthConversions() {
   print('1. Meter');
   print('2. Kilometer');
@@ -191,7 +956,6 @@ printAllLengthConversions() {
   print('7. Yard');
   print('8. Foot');
   print('9. Inch');
-  print('10. Light Year');
 }
 
 printAllTemperatureConversions() {
@@ -212,31 +976,6 @@ printAllAreaConversions() {
   print('9. Square Foot');
   print('10. Square Inch');
   print('11. Acre');
-}
-
-printAllVolumeConversion() {
-  print('1. Cubic Meter');
-  print('2. Cubic Kilometer');
-  print('3. Cubic Centimeter');
-  print('4. Liter');
-  print('5. Milliliter');
-  print('6. US Gallon');
-  print('7. US Quart');
-  print('8. US Pint');
-  print('9. US Cup');
-  print('10. US Fluid Ounce');
-  print('11. US Table Spoon');
-  print('12. US Tea Spoon');
-  print('13. Imperial Gallon');
-  print('14. Imperial Quart');
-  print('15. Imperial Pint');
-  print('16. Imperial Fluid Ounce');
-  print('17. Imperial Table Spoon');
-  print('18. Imperial Tea Spoon');
-  print('19. Cubic Mile');
-  print('20. Cubic Yard');
-  print('21. Cubic Foot');
-  print('22. Cubic Inch');
 }
 
 printAllWeightConversion() {
