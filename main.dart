@@ -327,9 +327,9 @@ convertArea(inputValue, firstUnit, secondUnit) {
   } else if (firstUnit == '6' && secondUnit == '1') {
     inputValue = inputValue / 0.0001;
   } else if (firstUnit == '1' && secondUnit == '7') {
-    // inputValue = inputValue;
+    inputValue = inputValue * 0.00000038610;
   } else if (firstUnit == '7' && secondUnit == '1') {
-    // inputValue = inputValue;
+    inputValue = inputValue / 0.00000038610;
   } else if (firstUnit == '1' && secondUnit == '8') {
     inputValue = inputValue * 1.1959900463;
   } else if (firstUnit == '8' && secondUnit == '1') {
@@ -391,13 +391,13 @@ convertArea(inputValue, firstUnit, secondUnit) {
   } else if (firstUnit == '5' && secondUnit == '3') {
     inputValue = inputValue / 100000000;
   } else if (firstUnit == '3' && secondUnit == '6') {
-    // inputValue = inputValue;
+    inputValue = inputValue * 0.00000001;
   } else if (firstUnit == '6' && secondUnit == '3') {
-    // inputValue = inputValue;
+    inputValue = inputValue / 0.00000001;
   } else if (firstUnit == '3' && secondUnit == '7') {
-    // inputValue = inputValue;
+    inputValue = inputValue / 25899881103.36;
   } else if (firstUnit == '7' && secondUnit == '3') {
-    // inputValue = inputValue;
+    inputValue = inputValue * 25899881103.36;
   } else if (firstUnit == '3' && secondUnit == '8') {
     inputValue = inputValue * 0.000119599;
   } else if (firstUnit == '8' && secondUnit == '3') {
@@ -411,21 +411,21 @@ convertArea(inputValue, firstUnit, secondUnit) {
   } else if (firstUnit == '10' && secondUnit == '3') {
     inputValue = inputValue / 0.15500031;
   } else if (firstUnit == '3' && secondUnit == '11') {
-    // inputValue = inputValue;
+    inputValue = inputValue * 0.000000024710538146717;
   } else if (firstUnit == '11' && secondUnit == '3') {
-    // inputValue = inputValue;
+    inputValue = inputValue / 0.000000024710538146717;
   } else if (firstUnit == '4' && secondUnit == '5') {
     inputValue = inputValue * 1000000;
   } else if (firstUnit == '5' && secondUnit == '4') {
     inputValue = inputValue / 1000000;
   } else if (firstUnit == '4' && secondUnit == '6') {
-    // inputValue = inputValue;
+    inputValue = inputValue * 0.0000000001;
   } else if (firstUnit == '6' && secondUnit == '4') {
-    // inputValue = inputValue;
+    inputValue = inputValue / 0.0000000001;
   } else if (firstUnit == '4' && secondUnit == '7') {
-    // inputValue = inputValue;
+    inputValue = inputValue / 2589988110336;
   } else if (firstUnit == '7' && secondUnit == '4') {
-    // inputValue = inputValue;
+    inputValue = inputValue * 2589988110336;
   } else if (firstUnit == '4' && secondUnit == '8') {
     inputValue = inputValue * 0.000001196;
   } else if (firstUnit == '8' && secondUnit == '4') {
@@ -438,34 +438,34 @@ convertArea(inputValue, firstUnit, secondUnit) {
     inputValue = inputValue * 0.0015500031;
   } else if (firstUnit == '10' && secondUnit == '4') {
     inputValue = inputValue / 0.0015500031;
-  } else if (firstUnit == '3' && secondUnit == '11') {
-    // inputValue = inputValue;
-  } else if (firstUnit == '11' && secondUnit == '3') {
-    // inputValue = inputValue;
+  } else if (firstUnit == '4' && secondUnit == '11') {
+    inputValue = inputValue / 4046856422.4;
+  } else if (firstUnit == '11' && secondUnit == '4') {
+    inputValue = inputValue * 4046856422.4;
   } else if (firstUnit == '5' && secondUnit == '6') {
-    // inputValue = inputValue;
+    inputValue = inputValue / 10000000000000000;
   } else if (firstUnit == '6' && secondUnit == '5') {
-    // inputValue = inputValue;
+    inputValue = inputValue * 10000000000000000;
   } else if (firstUnit == '5' && secondUnit == '7') {
-    // inputValue = inputValue;
+    inputValue = inputValue / 2589988110335972400;
   } else if (firstUnit == '7' && secondUnit == '5') {
-    // inputValue = inputValue;
+    inputValue = inputValue * 2589988110335972400;
   } else if (firstUnit == '5' && secondUnit == '8') {
-    // inputValue = inputValue;
+    inputValue = inputValue / 836127360000;
   } else if (firstUnit == '8' && secondUnit == '5') {
-    // inputValue = inputValue;
+    inputValue = inputValue * 836127360000;
   } else if (firstUnit == '5' && secondUnit == '9') {
-    // inputValue = inputValue;
+    inputValue = inputValue / 92903040000;
   } else if (firstUnit == '9' && secondUnit == '5') {
-    // inputValue = inputValue;
+    inputValue = inputValue * 92903040000;
   } else if (firstUnit == '5' && secondUnit == '10') {
-    // inputValue = inputValue;
+    inputValue = inputValue / 645160000;
   } else if (firstUnit == '10' && secondUnit == '5') {
-    // inputValue = inputValue;
+    inputValue = inputValue * 645160000;
   } else if (firstUnit == '5' && secondUnit == '11') {
-    // inputValue = inputValue;
+    inputValue = inputValue / 4046856422399924;
   } else if (firstUnit == '11' && secondUnit == '5') {
-    // inputValue = inputValue;
+    inputValue = inputValue * 4046856422399924;
   } else if (firstUnit == '6' && secondUnit == '7') {
     inputValue = inputValue * 0.0038610188;
   } else if (firstUnit == '7' && secondUnit == '6') {
@@ -523,9 +523,9 @@ convertArea(inputValue, firstUnit, secondUnit) {
   } else if (firstUnit == '11' && secondUnit == '9') {
     inputValue = inputValue / 0.0000229568;
   } else if (firstUnit == '10' && secondUnit == '11') {
-    // inputValue = inputValue;
+    inputValue = inputValue * 0.00000015942250790736;
   } else if (firstUnit == '11' && secondUnit == '10') {
-    // inputValue = inputValue;
+    inputValue = inputValue / 0.00000015942250790736;
   }
   print(inputValue);
 }
