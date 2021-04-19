@@ -35,9 +35,9 @@ main() {
     }
   } on FormatException {
     print(
-        'Error: Please provide a valid number which can be converted successfully');
+        'Error: Please provide a valid number which can be converted successfully. Try Again');
   } on NoUnitValueException {
-    print('Error: Please provide a conversion unit');
+    print('Error: Please provide a conversion unit. Try Again');
   }
 }
 
@@ -73,79 +73,87 @@ acceptUnit() {
   return unit;
 }
 
+acceptInput() {
+  String? stringInput = stdin.readLineSync();
+  if (stringInput != null) {
+    int inputValue = int.parse(stringInput);
+    return inputValue;
+  }
+}
+
 handleLengthConversions() {
   firstUnitQuestion();
   printAllLengthConversions();
   var firstUnit = acceptUnit();
+
   secondUnitQuestion();
   printAllLengthConversions();
   var secondUnit = acceptUnit();
+
   inputInstruction();
-  String? stringInput = stdin.readLineSync();
-  if (stringInput != null) {
-    int inputValue = int.parse(stringInput);
-    convertLength(inputValue, firstUnit, secondUnit);
-  }
+  int inputValue = acceptInput();
+
+  convertLength(inputValue, firstUnit, secondUnit);
 }
 
 handleTemperatureConversions() {
   firstUnitQuestion();
   printAllTemperatureConversions();
   var firstUnit = acceptUnit();
+
   secondUnitQuestion();
   printAllTemperatureConversions();
   var secondUnit = acceptUnit();
+
   inputInstruction();
-  String? stringInput = stdin.readLineSync();
-  if (stringInput != null) {
-    int inputValue = int.parse(stringInput);
-    convertTemperature(inputValue, firstUnit, secondUnit);
-  }
+  int inputValue = acceptInput();
+
+  convertTemperature(inputValue, firstUnit, secondUnit);
 }
 
 handleAreaConversions() {
   firstUnitQuestion();
   printAllAreaConversions();
   var firstUnit = acceptUnit();
+
   secondUnitQuestion();
   printAllAreaConversions();
   var secondUnit = acceptUnit();
+
   inputInstruction();
-  String? stringInput = stdin.readLineSync();
-  if (stringInput != null) {
-    int inputValue = int.parse(stringInput);
-    convertArea(inputValue, firstUnit, secondUnit);
-  }
+  int inputValue = acceptInput();
+
+  convertArea(inputValue, firstUnit, secondUnit);
 }
 
 handleWeightConversion() {
   firstUnitQuestion();
   printAllWeightConversion();
   var firstUnit = acceptUnit();
+
   secondUnitQuestion();
   printAllWeightConversion();
   var secondUnit = acceptUnit();
+
   inputInstruction();
-  String? stringInput = stdin.readLineSync();
-  if (stringInput != null) {
-    int inputValue = int.parse(stringInput);
-    convertWeight(inputValue, firstUnit, secondUnit);
-  }
+  int inputValue = acceptInput();
+
+  convertWeight(inputValue, firstUnit, secondUnit);
 }
 
 handleTimeConversion() {
   firstUnitQuestion();
   printAllTimeConversion();
   var firstUnit = acceptUnit();
+
   secondUnitQuestion();
   printAllTimeConversion();
   var secondUnit = acceptUnit();
+
   inputInstruction();
-  String? stringInput = stdin.readLineSync();
-  if (stringInput != null) {
-    int inputValue = int.parse(stringInput);
-    convertTime(inputValue, firstUnit, secondUnit);
-  }
+  int inputValue = acceptInput();
+
+  convertTime(inputValue, firstUnit, secondUnit);
 }
 
 convertLength(inputValue, firstUnit, secondUnit) {
