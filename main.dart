@@ -6,32 +6,43 @@ main() {
   printAllConversions();
 
   var mainConversion = stdin.readLineSync();
+  try {
+    switch (mainConversion) {
+      case '1':
+        handleLengthConversions();
+        break;
 
-  switch (mainConversion) {
-    case '1':
-      handleLengthConversions();
-      break;
+      case '2':
+        handleTemperatureConversions();
+        break;
 
-    case '2':
-      handleTemperatureConversions();
-      break;
+      case '3':
+        handleAreaConversions();
+        break;
 
-    case '3':
-      handleAreaConversions();
-      break;
+      case '4':
+        handleWeightConversion();
+        break;
 
-    case '4':
-      handleWeightConversion();
-      break;
+      case '5':
+        handleTimeConversion();
+        break;
 
-    case '5':
-      handleTimeConversion();
-      break;
-
-    default:
-      print('Input Error. Try Again');
-      break;
+      default:
+        print(
+            'Error: Input Error. Try again and please provide a number between 1 to 5');
+        break;
+    }
+  } on FormatException {
+    print(
+        'Error: Please provide a valid number which can be converted successfully');
+  } on NoUnitValueException {
+    print('Error: Please provide a conversion unit');
   }
+}
+
+class NoUnitValueException implements Exception {
+  String errMsg() => 'Value for unit should be provided';
 }
 
 printAllConversions() {
@@ -54,13 +65,21 @@ inputInstruction() {
   print('------Provide Input Value------');
 }
 
+acceptUnit() {
+  var unit = stdin.readLineSync();
+  if (unit == null || unit == '') {
+    throw new NoUnitValueException();
+  }
+  return unit;
+}
+
 handleLengthConversions() {
   firstUnitQuestion();
   printAllLengthConversions();
-  var firstUnit = stdin.readLineSync();
+  var firstUnit = acceptUnit();
   secondUnitQuestion();
   printAllLengthConversions();
-  var secondUnit = stdin.readLineSync();
+  var secondUnit = acceptUnit();
   inputInstruction();
   String? stringInput = stdin.readLineSync();
   if (stringInput != null) {
@@ -72,10 +91,10 @@ handleLengthConversions() {
 handleTemperatureConversions() {
   firstUnitQuestion();
   printAllTemperatureConversions();
-  var firstUnit = stdin.readLineSync();
+  var firstUnit = acceptUnit();
   secondUnitQuestion();
   printAllTemperatureConversions();
-  var secondUnit = stdin.readLineSync();
+  var secondUnit = acceptUnit();
   inputInstruction();
   String? stringInput = stdin.readLineSync();
   if (stringInput != null) {
@@ -87,10 +106,10 @@ handleTemperatureConversions() {
 handleAreaConversions() {
   firstUnitQuestion();
   printAllAreaConversions();
-  var firstUnit = stdin.readLineSync();
+  var firstUnit = acceptUnit();
   secondUnitQuestion();
   printAllAreaConversions();
-  var secondUnit = stdin.readLineSync();
+  var secondUnit = acceptUnit();
   inputInstruction();
   String? stringInput = stdin.readLineSync();
   if (stringInput != null) {
@@ -102,10 +121,10 @@ handleAreaConversions() {
 handleWeightConversion() {
   firstUnitQuestion();
   printAllWeightConversion();
-  var firstUnit = stdin.readLineSync();
+  var firstUnit = acceptUnit();
   secondUnitQuestion();
   printAllWeightConversion();
-  var secondUnit = stdin.readLineSync();
+  var secondUnit = acceptUnit();
   inputInstruction();
   String? stringInput = stdin.readLineSync();
   if (stringInput != null) {
@@ -117,10 +136,10 @@ handleWeightConversion() {
 handleTimeConversion() {
   firstUnitQuestion();
   printAllTimeConversion();
-  var firstUnit = stdin.readLineSync();
+  var firstUnit = acceptUnit();
   secondUnitQuestion();
   printAllTimeConversion();
-  var secondUnit = stdin.readLineSync();
+  var secondUnit = acceptUnit();
   inputInstruction();
   String? stringInput = stdin.readLineSync();
   if (stringInput != null) {
