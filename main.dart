@@ -599,13 +599,13 @@ convertWeight(inputValue, firstUnit, secondUnit) {
   } else if (firstUnit == '4' && secondUnit == '3') {
     inputValue = inputValue / 0.000000001;
   } else if (firstUnit == '3' && secondUnit == '5') {
-    inputValue = inputValue * (1 / 1016046900);
+    inputValue = inputValue / 1016046900;
   } else if (firstUnit == '5' && secondUnit == '3') {
-    inputValue = inputValue / (1 / 1016046900);
+    inputValue = inputValue * 1016046900;
   } else if (firstUnit == '3' && secondUnit == '6') {
-    inputValue = inputValue * (1 / 907184740);
+    inputValue = inputValue / 907184740;
   } else if (firstUnit == '6' && secondUnit == '3') {
-    inputValue = inputValue / (1 / 907184740);
+    inputValue = inputValue * 907184740;
   } else if (firstUnit == '3' && secondUnit == '7') {
     inputValue = inputValue * 0.0000022046;
   } else if (firstUnit == '7' && secondUnit == '3') {
