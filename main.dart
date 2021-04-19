@@ -575,9 +575,9 @@ convertWeight(inputValue, firstUnit, secondUnit) {
   } else if (firstUnit == '4' && secondUnit == '2') {
     inputValue = inputValue / 0.000001;
   } else if (firstUnit == '2' && secondUnit == '5') {
-    // inputValue = inputValue;
+    inputValue = inputValue * 0.00000098420652761106;
   } else if (firstUnit == '5' && secondUnit == '2') {
-    // inputValue = inputValue;
+    inputValue = inputValue / 0.00000098420652761106;
   } else if (firstUnit == '2' && secondUnit == '6') {
     inputValue = inputValue * 0.0000011023;
   } else if (firstUnit == '6' && secondUnit == '2') {
@@ -595,17 +595,17 @@ convertWeight(inputValue, firstUnit, secondUnit) {
   } else if (firstUnit == '9' && secondUnit == '2') {
     inputValue = inputValue / 5;
   } else if (firstUnit == '3' && secondUnit == '4') {
-    // inputValue = inputValue;
+    inputValue = inputValue * 0.000000001;
   } else if (firstUnit == '4' && secondUnit == '3') {
-    // inputValue = inputValue;
+    inputValue = inputValue / 0.000000001;
   } else if (firstUnit == '3' && secondUnit == '5') {
-    // inputValue = inputValue;
+    inputValue = inputValue * (1 / 1016046900);
   } else if (firstUnit == '5' && secondUnit == '3') {
-    // inputValue = inputValue;
+    inputValue = inputValue / (1 / 1016046900);
   } else if (firstUnit == '3' && secondUnit == '6') {
-    // inputValue = inputValue;
+    inputValue = inputValue * (1 / 907184740);
   } else if (firstUnit == '6' && secondUnit == '3') {
-    // inputValue = inputValue;
+    inputValue = inputValue / (1 / 907184740);
   } else if (firstUnit == '3' && secondUnit == '7') {
     inputValue = inputValue * 0.0000022046;
   } else if (firstUnit == '7' && secondUnit == '3') {
