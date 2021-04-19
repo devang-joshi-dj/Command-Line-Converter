@@ -38,9 +38,8 @@ printAllConversions() {
   print('1. Length Conversion');
   print('2. Temperature Conversion');
   print('3. Area Conversion');
-  print('4. Volume Conversion');
-  print('5. Weight Conversion');
-  print('6. Time Conversion');
+  print('4. Weight Conversion');
+  print('5. Time Conversion');
 }
 
 firstUnitQuestion() {
